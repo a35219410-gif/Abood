@@ -5,7 +5,6 @@ redis[asyncio]>=5.0.0
 pytz
 hijri_converter
 yt-dlp
-youtubesearchpython
 SpeechRecognition
 pydub
 gTTS
