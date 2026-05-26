@@ -12,13 +12,14 @@ REDIS_HOST=os.getenv("REDIS_HOST","localhost")
 REDIS_PORT=int(os.getenv("REDIS_PORT","6379"))
 REDIS_DB=int(os.getenv("REDIS_DB","0"))
 REDIS_PASSWORD=os.getenv("REDIS_PASSWORD",None)
+REDIS_SSL=os.getenv("REDIS_SSL","false").lower()=="true"
 r=aioredis.Redis(
     host=REDIS_HOST,
     port=REDIS_PORT,
     db=REDIS_DB,
     password=REDIS_PASSWORD,
     decode_responses=True,
-    ssl=True
+    ssl=REDIS_SSL
 )
 Dev_Zaid=BOT_TOKEN.split(":")[0] if BOT_TOKEN else "0"
 if not BOT_TOKEN: raise ValueError("BOT_TOKEN missing")
