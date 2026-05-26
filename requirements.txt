@@ -10,7 +10,6 @@ pydub
 gTTS
 pillow
 mutagen
-shazamio
 aiohttp
 aiofiles
 httpx[http2]
